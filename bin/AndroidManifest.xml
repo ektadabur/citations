@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.citations"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.citations.ContactPicker"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.PICK" >
+                </action>
+
+                <category android:name="android.intent.category.DEFAULT" >
+                </category>
+
+                <data
+                    android:path="contacts"
+                    android:scheme="content" >
+                </data>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.citations.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.citations.BestQuotesActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.citations.TextDetailActivity"
+            android:label="@string/title_activity_detail" >
+        </activity>
+        <activity
+            android:name="com.example.citations.ImageSlideActivity"
+            android:label="@string/Image_Quote" >
+        </activity>
+        <activity
+            android:name="com.example.citations.GridImage"
+            android:label="@string/img" >
+        </activity>
+        <activity
+            android:name="com.example.citations.AddTextQuoteActivity"
+            android:label="@string/title_activity_add_text_quote" >
+        </activity>
+        <activity
+            android:name="com.example.citations.TextSMSActivity"
+            android:label="@string/title_activity_text_sms" >
+        </activity>
+        <activity
+            android:name="com.example.citations.TextEmailActivity"
+            android:label="@string/title_activity_text_Email" >
+        </activity>
+        <activity
+            android:name="com.example.citations.GalleryActivity"
+            android:label="@string/title_activity_gallery" >
+        </activity>
+    </application>
+
+</manifest>
